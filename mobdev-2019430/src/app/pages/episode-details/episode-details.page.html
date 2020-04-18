@@ -6,9 +6,19 @@
    <ion-title>{{ episode?.title }}</ion-title>
  </ion-toolbar>
 </ion-header>
-<ion-content class="ion-padding">
+<ion-content >
 
-<ion-card class="movie-card">
+<ion-card *ngIf="episode">
+
+<ion-card-title>
+        {{ episode.title }}
+ </ion-card-title>
+
+ <ion-item lines="none" >
+        <ion-card-title slot="start">Air Date</ion-card-title>
+        <ion-label text-wrap>{{ episode.air_date }}</ion-label>
+</ion-item>
+
 
 </ion-card>
 

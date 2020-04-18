@@ -23,6 +23,6 @@ export class EpisodesPage implements OnInit {
 
  openDetails(episode){
      let episodeId = episode.episode_id;
-     this.router.navigateByUrl('/tabs/episodes/${episodeId}');
+      this.router.navigateByUrl(`/tabs/episodes/${episodeId}`);
  }
 }

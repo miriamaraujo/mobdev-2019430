@@ -19,7 +19,7 @@ export class EpisodeDetailsPage implements OnInit {
     this.episodeId = this.activatedRoute.snapshot.paramMap.get('id');
     this.api.getEpisode(this.episodeId).subscribe(res => {
       this.episode = res[0];
-      console.log(JSON.stringify(this.episode.char_id));
+      console.log(JSON.stringify(this.episode.episode_id));
     });
   }
 }

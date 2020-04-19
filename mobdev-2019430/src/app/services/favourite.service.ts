@@ -1,5 +1,7 @@
 import { Injectable } from '@angular/core';
-const STORAGE_KEY = 'favouriteFilms';
+import { Storage } from '@ionic/storage';
+
+const STORAGE_KEY = 'favouriteEpisodes';
 @Injectable({
   providedIn: 'root'
 })

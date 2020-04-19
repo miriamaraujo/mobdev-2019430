@@ -5,12 +5,12 @@
 :root {
 
 
-  --ion-background-color: var(--ion-color-dark);
+  --ion-background-color: #000000;
   --ion-text-color: #fff;
   --ion-tab-bar-background: var(--ion-color-primary);
 
   ion-tab-button {
-    --color-selected: var(--ion-color-secondary);
+    --color-selected: #ffee00;
   }
   --ion-text-color-rgb: 255, 255, 255;
 

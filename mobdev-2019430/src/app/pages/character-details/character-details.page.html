@@ -1,14 +1,59 @@
 <ion-header>
- <ion-toolbar color="dark">
-   <ion-buttons slot="start">
-     <ion-back-button defaulthref="/tabs/characters"></ion-back-button>
-   </ion-buttons>
-   <ion-title> {{ character?.name }}</ion-title>
- </ion-toolbar>
+	<ion-toolbar color="dark">
+		<ion-buttons slot="start">
+			<ion-back-button defaulthref="/tabs/characters"></ion-back-button>
+		</ion-buttons>
+		<ion-title> {{ character?.name }}</ion-title>
+	</ion-toolbar>
 </ion-header>
 
 <ion-content>
-<ion-card>
-</ion-card>
+	<ion-card class="movie-card" *ngIf="character">
 
+		    <ion-item class="movie-info" lines="none">
+			<img [src]="character.img" >
+            </ion-item>
+            
+			<ion-item class="movie-info" lines="none">
+				<ion-icon name="key-outline" slot="start"></ion-icon>
+				ID : {{ character.char_id }}
+			</ion-item>
+
+			<ion-item class="movie-info" lines="none">
+				<ion-icon name="gift-outline" slot="start"></ion-icon>
+				Birthday : {{ character.birthday }}
+			</ion-item>
+
+			<ion-item class="movie-info" lines="none">
+				<ion-icon name="briefcase-outline" slot="start"></ion-icon>
+				Occupation : {{ character.occupation }}
+			</ion-item>
+
+			<ion-item class="movie-info" lines="none">
+				<ion-icon name="pulse-outline" slot="start"></ion-icon>
+				Status : {{ character.status }}
+			</ion-item>
+
+			<ion-item class="movie-info" lines="none">
+				<ion-icon name="at-outline" slot="start"></ion-icon>
+				Nickname : {{ character.nickname }}
+			</ion-item>
+
+			<ion-item class="movie-info" lines="none">
+				<ion-icon name="glasses-outline" slot="start"></ion-icon>
+				Appearance : {{ character.appearance }}
+			</ion-item>
+
+			<ion-item class="movie-info" lines="none">
+				<ion-icon name="videocam-outline" slot="start"></ion-icon>
+				Portrayed : {{ character.portrayed }}
+			</ion-item>
+
+			<ion-item class="movie-info" lines="none">
+				<ion-icon name="film-outline" slot="start"></ion-icon>
+				Category : {{ character.category }}
+			</ion-item>
+
+
+	</ion-card>
 </ion-content>

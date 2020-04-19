@@ -5,12 +5,12 @@ import {HttpClient} from '@angular/common/http'
   providedIn: 'root'
 })
 export class ApiService {
-
+   
  
   constructor(private http: HttpClient) { }
  
   getEpisodes() {
-    return this.http.get('https://breakingbadapi.com/episodes');
+    return this.http.get('https://breakingbadapi.com/api/episodes/');
   }
  
   getEpisode(id) {
@@ -18,10 +18,22 @@ export class ApiService {
   }
 
   getCharacters() {
-    return this.http.get('https://breakingbadapi.com/characters');
+    return this.http.get('https://breakingbadapi.com/api/characters/');
   }
  
   getCharacter(id) {
     return this.http.get(`https://breakingbadapi.com/api/characters/${id}`);
+  }
+
+  getQuotes() {
+    return this.http.get('https://breakingbadapi.com/api/quotes/');
+  }
+ 
+  getQuote(id) {
+    return this.http.get(`https://breakingbadapi.com/api/quotes/${id}`);
+  }
+
+  getDeaths(id) {
+    return this.http.get(`https://breakingbadapi.com/api/deaths/${id}`);
   }
 }

@@ -8,7 +8,7 @@
    
    <ion-card *ngFor="let death of (deaths | async)" >
     <ion-item lines="none" class="movie-info" >
-       <ion-icon name="skull-outline" slot="start"></ion-icon>
+       <ion-icon color="warning" name="skull-outline" slot="start"></ion-icon>
        Death-Count : {{ death.deathCount }}
        </ion-item>
    </ion-card>

@@ -23,6 +23,11 @@
     --detail-push-color: var(--ion-color-light);
   }
 
+  ion-icon {
+      --ion-background-color: #ffee00;
+      --color-selected: #ffee00;
+  }
+
 
   /** primary **/
   --ion-color-primary: #3880ff;

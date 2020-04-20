@@ -1,7 +1,6 @@
 import { FavouriteService } from './../../services/favourite.service';
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { ApiService } from './../../services/api.service';
 
 
@@ -16,7 +15,7 @@ export class EpisodeDetailsPage implements OnInit {
   isFavourite = false;
   
 
-  constructor(private activatedRoute: ActivatedRoute, private api: ApiService, private http:HttpClientModule, private favouriteService: FavouriteService) { }
+  constructor(private activatedRoute: ActivatedRoute, private api: ApiService, private favouriteService: FavouriteService) { }
   
   ngOnInit() {
       

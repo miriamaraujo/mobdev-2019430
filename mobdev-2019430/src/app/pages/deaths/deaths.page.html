@@ -6,8 +6,11 @@
 
 <ion-content>
    
-       <ion-item *ngIf="deaths" >
-       {{ number_of_deaths }}
+   <ion-card *ngFor="let death of (deaths | async)" >
+    <ion-item lines="none" class="movie-info" >
+       <ion-icon name="skull-outline" slot="start"></ion-icon>
+       Death-Count : {{ death.deathCount }}
        </ion-item>
+   </ion-card>
    
 </ion-content>

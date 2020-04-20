@@ -15,7 +15,7 @@ export class DeathsPage implements OnInit {
   constructor(private router: Router, private http: HttpClient) { }
  
   ngOnInit() {
-    this.deaths = this.http.get('https://breakingbadapi.com/api/deaths');
+    this.deaths = this.http.get('https://breakingbadapi.com/api/death-count');
     this.deaths.subscribe(data => {
       console.log('my data: ', data);
     });

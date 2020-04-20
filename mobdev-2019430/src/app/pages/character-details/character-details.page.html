@@ -4,6 +4,16 @@
 			<ion-back-button defaulthref="/tabs/characters"></ion-back-button>
 		</ion-buttons>
 		<ion-title> {{ character?.name }}</ion-title>
+
+        <ion-buttons slot="end">
+   <ion-button (click)="likeButtonClick()" *ngIf="isliked">
+      <ion-icon color="warning" name="thubs-up" slot="icon-only"></ion-icon>
+   </ion-button>
+    <ion-button (click)="dislikeButtonClick()" *ngIf="!isliked">
+      <ion-icon color="warning"name="thumbs-up-outline" slot="icon-only"></ion-icon>
+    </ion-button>
+   </ion-buttons>
+
 	</ion-toolbar>
 </ion-header>
 

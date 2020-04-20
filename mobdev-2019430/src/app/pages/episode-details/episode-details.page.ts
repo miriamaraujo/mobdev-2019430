@@ -25,11 +25,13 @@ export class EpisodeDetailsPage implements OnInit {
       console.log(JSON.stringify(this.episode.episode_id));
     });
 
-    this.favouriteService.isFavourite(this.episodeId).then(isFav => {
+    
+         this.favouriteService.isFavourite(this.episodeId).then(isFav => {
       this.isFavourite = isFav;
     });
   }
-  favouriteEpispde() {
+ 
+  favouriteEpisode() {
     this.favouriteService.favouriteEpisode(this.episodeId).then(() => {
       this.isFavourite = true;
     });
@@ -39,5 +41,5 @@ export class EpisodeDetailsPage implements OnInit {
     this.favouriteService.unfavouriteEpisode(this.episodeId).then(() => {
       this.isFavourite = false;
     });
-  }
+    }
 }

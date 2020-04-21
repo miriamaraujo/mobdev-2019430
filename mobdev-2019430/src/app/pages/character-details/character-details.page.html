@@ -3,15 +3,23 @@
 		<ion-buttons slot="start">
 			<ion-back-button defaulthref="/tabs/characters"></ion-back-button>
 		</ion-buttons>
+
 		<ion-title> {{ character?.name }}</ion-title>
 
-        <ion-buttons slot="end">
-   <ion-button (click)="unfavouriteCharacter()" *ngIf="isliked">
-      <ion-icon color="warning" name="thumbs-up-outline" slot="icon-only"></ion-icon>
+       
+ <ion-buttons slot="end">
+   <ion-button (click)="unfavouriteCharacter()" *ngIf="isLiked">
+    
+      <ion-icon color="warning" name="thumbs-up" slot="icon-only"></ion-icon>
+  
    </ion-button>
-    <ion-button (click)="favouriteCharacter()" *ngIf="!isliked">
-      <ion-icon color="warning"name="thumbs-up-" slot="icon-only"></ion-icon>
+
+    <ion-button (click)="favouriteCharacter()" *ngIf="!isLiked">
+  
+      <ion-icon color="warning"name="thumbs-up-outline" slot="icon-only"></ion-icon>
+  
     </ion-button>
+ 
    </ion-buttons>
 
 	</ion-toolbar>

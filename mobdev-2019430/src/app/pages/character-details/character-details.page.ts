@@ -9,11 +9,10 @@ import { ApiService } from './../../services/api.service';
   templateUrl: './character-details.page.html',
   styleUrls: ['./character-details.page.scss'],
 })
-
 export class CharacterDetailsPage implements OnInit {
   character: any;
   characterId = null;
-    isLiked = false;
+  isLiked = false;
 
 constructor(private activatedRoute: ActivatedRoute, private api: ApiService, private favouriteService: FavouriteService) { }
 
@@ -37,7 +36,7 @@ constructor(private activatedRoute: ActivatedRoute, private api: ApiService, pri
     });
   }
  
-  unfavouriteEpisode() {
+  unfavouriteCharacter() {
     this.favouriteService.unfavouriteCharacter(this.characterId).then(() => {
       this.isLiked = false;
     });

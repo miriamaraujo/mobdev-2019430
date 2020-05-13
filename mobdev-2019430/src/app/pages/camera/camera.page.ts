@@ -1,5 +1,5 @@
-/*import { Component } from '@angular/core';
-import { Plugins, CameraResultType, CameraSource } from '@capacitor/core';
+import { Component } from '@angular/core';
+import { Plugins, CameraResultType, CameraSource } from '@capacitor/core';/*here*/
 import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
 
 
@@ -9,7 +9,7 @@ import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
   styleUrls: ['./camera.page.scss'],
 })
 
-export class Tab2Page {
+export class CameraPage {
   photo: SafeResourceUrl;
 
   constructor(private sanitizer: DomSanitizer) {  }
@@ -24,4 +24,4 @@ export class Tab2Page {
 
     this.photo = this.sanitizer.bypassSecurityTrustResourceUrl(image && (image.dataUrl));
   }
-}*/
+}

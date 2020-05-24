@@ -1,3 +1,4 @@
+
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { TabsPage } from './tabs.page';
@@ -29,6 +30,15 @@ const routes: Routes = [
                     {
                         path: ':id',
                         loadChildren: () => import('../character-details/character-details.module').then(m => m.CharacterDetailsPageModule)
+                    }
+                ]
+            },
+            {
+                path: 'camera',
+                children: [
+                    {
+                        path: '',
+                        loadChildren: () => import('../camera/camera.module').then(m => m.CameraPageModule)
                     }
                 ]
             },
